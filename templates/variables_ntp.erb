@@ -1,0 +1,49 @@
+# File Managed By Puppet
+
+These are the variables used by the module ntpd
+
+User variables (unfiltered):
+# $ntpd_server = <%= scope.lookupvar('ntpd_server') %>
+
+User variables (after params.pp filter):
+# $ntpd::server = <%= scope.lookupvar('ntpd::server') %>
+
+General internal variables:
+$ntpd::packagename = <%= scope.lookupvar('ntpd::packagename') %>
+$ntpd::servicename = <%= scope.lookupvar('ntpd::servicename') %>
+$ntpd::processname = <%= scope.lookupvar('ntpd::processname') %>
+$ntpd::hasstatus = <%= scope.lookupvar('ntpd::hasstatus') %>
+$ntpd::configfile = <%= scope.lookupvar('ntpd::configfile') %>
+$ntpd::configfile_mode = <%= scope.lookupvar('ntpd::configfile_mode') %>
+$ntpd::configfile_owner = <%= scope.lookupvar('ntpd::configfile_owner') %>
+$ntpd::configfile_group = <%= scope.lookupvar('ntpd::configfile_group') %>
+$ntpd::configdir = <%= scope.lookupvar('ntpd::configdir') %>
+$ntpd::initconfigfile = <%= scope.lookupvar('ntpd::initconfigfile') %>
+$ntpd::pidfile = <%= scope.lookupvar('ntpd::pidfile') %>
+$ntpd::datadir = <%= scope.lookupvar('ntpd::datadir') %>
+$ntpd::logdir = <%= scope.lookupvar('ntpd::logdir') %>
+$ntpd::protocol = <%= scope.lookupvar('ntpd::protocol') %>
+$ntpd::port = <%= scope.lookupvar('ntpd::port') %>
+
+Variables used by monitor class:
+$ntpd::monitor_target_real = <%= scope.lookupvar('ntpd::monitor_target_real') %> ( Set with $ntpd_monitor_target )
+$ntpd::monitor_baseurl_real = <%= scope.lookupvar('ntpd::monitor_baseurl_real') %> ( Set with $ntpd_monitor_baseurl )
+$ntpd::monitor_url_pattern = <%= scope.lookupvar('ntpd::monitor_url_pattern') %> ( Set with $ntpd_monitor_url_pattern )
+$ntpd::monitor_port_enable = <%= scope.lookupvar('ntpd::monitor_port_enable') %> ( Set with $ntpd_monitor_port )
+$ntpd::monitor_url_enable = <%= scope.lookupvar('ntpd::monitor_url_enable') %> ( Set with $ntpd_monitor_url )
+$ntpd::monitor_process_enable = <%= scope.lookupvar('ntpd::monitor_process_enable') %> ( Set with $ntpd_monitor_process )
+$ntpd::monitor_plugin_enable = <%= scope.lookupvar('ntpd::monitor_plugin_enable') %> ( Set with $ntpd_monitor_plugin )
+
+Variables used by backup class:
+$ntpd::backup_target_real = <%= scope.lookupvar('ntpd::backup_target_real') %> ( Set with $ntpd_backup_target )
+$ntpd::backup_frequency = <%= scope.lookupvar('ntpd::backup_frequency') %> ( Set with $ntpd_backup_frequency )
+$ntpd::backup_data_enable = <%= scope.lookupvar('ntpd::backup_data_enable') %> ( Set with $ntpd_backup_data )
+$ntpd::backup_log_enable = <%= scope.lookupvar('ntpd::backup_log_enable') %> ( Set with $ntpd_backup_log )
+
+Variables used by firewall class:
+$ntpd::firewall_source_real = <%= scope.lookupvar('ntpd::firewall_source_real') %> ( Set with $ntpd_firewall_source )
+$ntpd::firewall_destination_real = <%= scope.lookupvar('ntpd::firewall_destination_real') %> ( Set with $ntpd_firewall_destination )
+$ntpd::firewall_enable = <%= scope.lookupvar('ntpd::firewall_destination_real') %> ( Set with $ntpd_firewall_enable )
+
+Module base source for static files:
+$ntpd::general_base_source = <%= scope.lookupvar('ntpd::general_base_source') %> ( Set with $base_source )
